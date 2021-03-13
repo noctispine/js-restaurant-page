@@ -1,0 +1,36 @@
+$primary-clr: #C28B5B;
+$secondary-clr: #FFBF5F;
+$righteous-font: 'Righteous', cursive;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: $primary-clr;
+    font-family: $righteous-font;
+    height: 15vh;
+    @include flex-center();
+    flex-wrap: wrap;
+    h1 {
+        align-self: center;
+        font-size: 4rem;
+    }
+}
+
+nav {
+    background-color: $secondary-clr;
+    margin: 5rem 8rem;
+    @include flex-center();
+
+    button {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 2rem 2rem;
+        flex-basis: 1;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+}
