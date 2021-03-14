@@ -2,13 +2,18 @@
 @use 'home';
 @use 'initial_load';
 
-body {
-    background-color: #FFEBCE;
+
+html {
+    background: url("/assets/img/cigar.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
 }
+ 
+
+
 
 img {
-    
     width: 100%;
     height: 50vh;
-
 }

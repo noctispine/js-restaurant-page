@@ -32,16 +32,28 @@ function createNav(){
 
 function createMain(){
     const main = document.createElement('main');
+    main.setAttribute('id', 'main');
     return main;
+}
+
+function createFooter(text){
+    const footer = document.createElement('footer');
+    const para = document.createElement('p');
+    para.textContent = text;
+
+    footer.appendChild(para);
+    return footer;
 }
 
 function loadInitial(){
     const content = document.getElementById('content');
 
-    const header = createHeader('Cigs');
+    const header = createHeader('Stogies');
     const nav = createNav();
     const main = createMain();
+    const footer = createFooter('Do Not Smoke');
 
+    document.body.appendChild(footer);
     content.appendChild(header);
     content.appendChild(nav);
     content.appendChild(main);

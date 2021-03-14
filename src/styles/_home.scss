@@ -1,0 +1,32 @@
+@import "variables";
+
+@mixin borderx {
+  border: 2px solid red;
+}
+
+#about-section {
+  background-color: $orange-clr;
+  opacity: 0.8;
+  div {
+    margin: 0 15rem;
+
+    display: flex;
+    justify-content: center;
+    p {
+      width: 65ch;
+      letter-spacing: 1px;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: inline-block;
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      margin-right: 2rem;
+      display: inline-block;
+      font-size: 3rem;
+      writing-mode: vertical-lr;
+      text-align: center;
+    }
+  }
+}
