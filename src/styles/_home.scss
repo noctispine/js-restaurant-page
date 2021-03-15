@@ -4,9 +4,10 @@
   border: 2px solid red;
 }
 
-#about-section {
+.about-section {
   background-color: $orange-clr;
   opacity: 0.8;
+  margin-bottom: 3rem;
   div {
     margin: 0 15rem;
 
@@ -29,4 +30,18 @@
       text-align: center;
     }
   }
+}
+
+
+@include fade-in(fade-about, 0, .8, -300px, 0);
+
+#about {
+  animation: fade-about 2s;
+}
+
+@include fade-in(fade-dunno, 0, .8, 300px, 0);
+
+
+#dunno {
+  animation: fade-dunno 2s;
 }

@@ -5,8 +5,19 @@
     justify-content: center;
 }
 
+@keyframes scale-header{
+    from {transform: scale(1.2);}
+    to {transform: scale(1);}
+}
+
+@keyframes scale-div{
+    from {transform: scale(1);}
+    to {transform: scale(1);}
+}
+
 
 header {
+    animation: scale-div 2s;
     position:sticky;
     background-color: $primary-clr2;
     color: white;
@@ -15,20 +26,24 @@ header {
     @include flex-center();
     flex-wrap: wrap;
     h1 {
+        animation: scale-header 2s; 
         align-self: center;
         font-size: 5.5rem;
     }
 }
 
+@include fade-in(fade-nav, 0, .8, 0, 0);
+
 nav {
     background-color: black;
+    animation: fade-nav 4s;
     margin: 5rem 8rem;
     opacity: 0.8;
     @include flex-center();
 
     button {
         color: white;
-        font-size: 3rem;
+        font-size: 3em;
         font-weight: bold;
         margin: 2rem 2rem;
         flex-basis: 1;
@@ -39,10 +54,9 @@ nav {
 }
 
 footer {
-    position: absolute;
+    margin-top: 5rem;
     background-color: $primary-clr2;
     color: white;
-    bottom: 0;
     width: 100%;
     height: 3rem;
     display: flex;
@@ -51,6 +65,6 @@ footer {
     p {
         align-self: center;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2em;
     }
 }

@@ -4,3 +4,13 @@ $secondary-clr: #FFBF5F;
 $righteous-font: 'Righteous', cursive;
 $italianno-font: 'Italianno', cursive;
 $orange-clr: #FF7700;
+
+
+@mixin fade-in($animation-name,$opacity-from, $opacity-to, $translate-x-from, $translate-x-to) {
+    @keyframes #{$animation-name}{
+        from {opacity: $opacity-from; transform: translate($translate-x-from,0)}
+        to {opacity: $opacity-to; transform: translate($translate-x-to,0)}
+    }
+}
+
+

@@ -32,7 +32,7 @@ function createNav(){
 
 function createMain(){
     const main = document.createElement('main');
-    main.setAttribute('id', 'main');
+    main.setAttribute('id', 'main-content');
     return main;
 }
 
@@ -51,12 +51,12 @@ function loadInitial(){
     const header = createHeader('Stogies');
     const nav = createNav();
     const main = createMain();
-    const footer = createFooter('Do Not Smoke');
-
-    document.body.appendChild(footer);
+    const footer = createFooter('Smoking = Bad');
+    
     content.appendChild(header);
     content.appendChild(nav);
     content.appendChild(main);
+    content.appendChild(footer);
 }
 
 export default loadInitial;
