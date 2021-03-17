@@ -2,14 +2,13 @@
 @use 'home';
 @use 'initial_load';
 @use 'menu';
-
+@use 'contact';
 
 html {
-    background: url("/assets/img/cigar.jpg") no-repeat center center fixed;
-    background-size: cover;
+  background: url("/assets/img/cigar.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
- 
 
-
-
-
+body {
+    overflow-x: hidden;
+}
