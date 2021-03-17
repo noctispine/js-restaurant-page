@@ -105,8 +105,8 @@ function loadMenu() {
     const mainContent = document.getElementById("main-content");
     const menuBtn = document.getElementById('menu');
     const contactBtn = document.getElementById('contact');
+    
     const homeBtn = document.getElementById('home')
-
     contactBtn.classList.remove('selected');
     homeBtn.classList.remove('selected');
     menuBtn.classList.add('selected');
