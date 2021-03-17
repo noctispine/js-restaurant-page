@@ -1,70 +1,116 @@
-@import 'variables';
+@import "variables";
 
 @mixin flex-center {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes scale-header{
-    from {transform: scale(1.2);}
-    to {transform: scale(1);}
+@keyframes scale-header {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-@keyframes scale-div{
-    from {transform: scale(1);}
-    to {transform: scale(1);}
+@keyframes scale-div {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-
 
 header {
-    animation: scale-div 2s;
-    position:sticky;
-    background-color: $primary-clr2;
-    color: white;
-    font-family: $italianno-font;
-    height: 15vh;
-    @include flex-center();
-    flex-wrap: wrap;
-    h1 {
-        animation: scale-header 2s; 
-        align-self: center;
-        font-size: 5.5rem;
-    }
+  animation: scale-div 2s;
+  position: sticky;
+  background-color: $primary-clr2;
+  color: white;
+  font-family: $italianno-font;
+  height: 15vh;
+  @include flex-center();
+  flex-wrap: wrap;
+  h1 {
+    animation: scale-header 2s;
+    align-self: center;
+    font-size: 5.5rem;
+  }
 }
 
-@include fade-in(fade-nav, 0, .8, 0, 0);
+@include fade-in(fade-nav, 0, 0.8, 0, 0);
 
 nav {
-    background-color: black;
-    animation: fade-nav 4s;
-    margin: 5rem 8rem;
-    opacity: 0.8;
-    @include flex-center();
+  background-color: black;
+  animation: fade-nav 4s;
+  margin: 5rem 8rem;
+  opacity: 0.8;
+  @include flex-center();
 
-    button {
-        color: white;
-        font-size: 3em;
-        font-weight: bold;
-        margin: 2rem 2rem;
-        flex-basis: 1;
-        border: none;
-        background-color: transparent;
-        outline: none;
+  button {
+    position: relative;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 2rem 2rem;
+    flex-basis: 1;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+     
+      }
+
+    &:hover:before{
+        visibility: visible;
+        transform: scale(1);
     }
+
+    
+    
+  }
+
+  .selected{
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #FFF;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+  }
 }
 
 footer {
-    margin-top: 5rem;
-    background-color: $primary-clr2;
-    color: white;
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
+  margin-top: 5rem;
+  background-color: $primary-clr2;
+  color: white;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
 
-    p {
-        align-self: center;
-        text-align: center;
-        font-size: 2em;
-    }
+  p {
+    align-self: center;
+    text-align: center;
+    font-size: 2em;
+  }
 }
