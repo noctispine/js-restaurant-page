@@ -51,7 +51,7 @@ function loadInitial(){
     const header = createHeader('Stogies');
     const nav = createNav();
     const main = createMain();
-    const footer = createFooter('copyright bla bla');
+    const footer = createFooter('Copyright bla bla');
     
     content.appendChild(header);
     content.appendChild(nav);
