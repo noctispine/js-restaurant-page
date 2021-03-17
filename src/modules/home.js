@@ -36,6 +36,15 @@ function loadHome(){
     const text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla officia sint facilis, enim nisi recusandae soluta tempore dolorum omnis ad placeat velit ipsa? Voluptatibus optio perferendis debitis fugiat officia quos iusto? Autem quos quis minima minus unde nobis quisquam harum voluptas cupiditate, ullam ab dolor, accusantium voluptatibus voluptate perferendis. Asperiores porro, accusantium delectus dignissimos blanditiis commodi magni nostrum quod quisquam quo nemo aperiam facilis autem voluptates ipsam est reiciendis ullam?";
     const aboutSection = createAboutSection('about-section', 'about', 'About Us', text);
 
+    const menuBtn = document.getElementById('menu');
+    const contactBtn = document.getElementById('contact');
+    const homeBtn = document.getElementById('home')
+
+    contactBtn.classList.remove('selected');
+    menuBtn.classList.remove('selected');
+    homeBtn.classList.add('selected');
+    
+
     mainContent.textContent = '';
 
     mainContent.appendChild(aboutSection);
